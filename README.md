@@ -85,7 +85,7 @@ mini-spa/
 2. Install **Live Server Extension**
 3. Right-click `index.html`
 4. Click **Open with Live Server**
-5. LIVE LINK: 
+5. LIVE LINK:  https://ankita292006.github.io/SPA_Task_15/
 
 ⚠ Important:  
 Do NOT open using `file://` path — routing will not work properly.
@@ -101,11 +101,17 @@ window.addEventListener("popstate")
 Routes are defined inside a routes object:
 
 const routes = {
+
 "/": Home,
+
 "/about": About,
+
 "/contact": Contact,
+
 "/dashboard": ProtectedRoute,
+
 "/charts": Charts
+
 };
 
 
