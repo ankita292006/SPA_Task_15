@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advanced Mini SPA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav>
+  <h2>🚀 Pro SPA</h2>
+
+  <button id="menuToggle" class="menu-btn">☰</button>
+
+  <ul id="navLinks">
+    <li><a href="/" data-link>Home</a></li>
+    <li><a href="/about" data-link>About</a></li>
+    <li><a href="/contact" data-link>Contact</a></li>
+    <li><a href="/dashboard" data-link>Dashboard</a></li>
+    <li><a href="/api" data-link>API</a></li>
+    <li><a href="/settings" data-link>Settings</a></li>
+    <li><a href="/charts" data-link>Charts</a></li>
+
+  </ul>
+
+  <button id="themeToggle">🌙</button>
+</nav>
+
+<div id="progressBar"></div>
+
+  <div id="loader" class="loader hidden">Loading...</div>
+  <div id="toast" class="toast"></div>
+
+  <main id="app"></main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>

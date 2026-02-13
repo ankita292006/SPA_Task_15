@@ -1,0 +1,143 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  background: linear-gradient(-45deg, #1e3a8a, #3b82f6, #9333ea, #0ea5e9);
+  background-size: 400% 400%;
+  animation: gradientBG 12s ease infinite;
+  transition: background 0.4s ease;
+  color: white;
+}
+
+@keyframes gradientBG {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+body.dark {
+  background: #111827;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  backdrop-filter: blur(10px);
+  background: rgba(255,255,255,0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+nav a.active {
+  background: rgba(255,255,255,0.2);
+}
+
+nav button {
+  background: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+main {
+  padding: 60px;
+  transition: opacity 0.4s ease;
+}
+
+.fade {
+  opacity: 0;
+}
+
+.card {
+  backdrop-filter: blur(15px);
+  background: rgba(255,255,255,0.15);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+.loader {
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  padding: 10px 20px;
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.toast.show {
+  opacity: 1;
+}
+.menu-btn {
+  display: none;
+  font-size: 22px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+#progressBar {
+  height: 4px;
+  width: 0%;
+  background: #22d3ee;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+
+  #navLinks {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    flex-direction: column;
+    background: rgba(0,0,0,0.7);
+    padding: 20px;
+    border-radius: 10px;
+    display: none;
+  }
+
+  #navLinks.show {
+    display: flex;
+  }
+}
+canvas {
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.chart-container {
+  max-width: 700px;
+  margin: auto;
+}
